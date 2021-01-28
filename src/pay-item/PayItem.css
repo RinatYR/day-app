@@ -1,0 +1,48 @@
+.pay-item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    border-bottom: 1px solid #c6c6c6;
+}
+.pay-item__date{
+    display: flex;
+    align-items: flex-end;
+}
+.pay-item__day{
+    font-size: 30px;
+    font-weight: 500;
+    color: #333;
+    line-height: 0.9em;
+    margin-right: 10px;
+}
+.pay-item__mounth{
+    font-size: 15px;
+    color: #555;
+    line-height: 1em;
+    margin-right: 5px;
+}
+.pay-item__year{
+    font-size: 15px;
+    color: #777;
+    font-weight: 500;
+    line-height: 1em;
+}
+.pay-item__positive{
+    color: green;
+    font-size: 20px;
+    text-align: right;
+}
+.pay-item__negative{
+    color: red;
+    font-size: 20px;
+    text-align: right;
+}
+.pay-item__saldo{
+    color: green;
+    font-size: 30px;
+    text-align: right;
+}
+.pay-item__saldo_negative{
+    color: red;
+}
