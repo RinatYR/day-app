@@ -1,11 +1,15 @@
 import './Header.css';
 
-function Header(){
+function Header() {
     return (
         <header className="header">
-            <h1 className="header__title">Дневник расходов</h1>
+            <div className="header__wrap">
+                <h1 className='header__title'>Дневник расходов</h1>
+            </div>
         </header>
-    );
+    )
+
 }
+
 
 export default Header;

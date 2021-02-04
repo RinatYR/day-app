@@ -15,8 +15,9 @@ function App() {
     <>
       <Header />
       <PayList payItems={payItems} />
-    </>
+    </>                                 //React.Fragment (Можно не импортировать "import React from 'react';"")
   );
 }
+ 
 
 export default App;

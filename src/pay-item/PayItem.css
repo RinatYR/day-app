@@ -1,9 +1,18 @@
 .pay-item{
     display: flex;
     justify-content: space-between;
-    align-items: center;
     padding: 15px 5%;
-    border-bottom: 1px solid #c6c6c6;
+    align-items: center;
+    border: 1px solid #e0e0e0;
+    border-radius: 40px;
+    margin: 20px;
+    /* display: flex;
+  align-items: center;
+  height: 90%; */
+  box-sizing: border-box;
+ 
+  box-shadow: 2px 2px 5px #d3d2d2, -2px -2px 5px #f5f4f4;
+
 }
 .pay-item__date{
     display: flex;
@@ -29,20 +38,16 @@
     line-height: 1em;
 }
 .pay-item__positive{
-    color: green;
+    color: #05571a;
     font-size: 20px;
     text-align: right;
 }
 .pay-item__negative{
-    color: red;
+    color: #c90d0d;
     font-size: 20px;
     text-align: right;
 }
 .pay-item__saldo{
-    color: green;
-    font-size: 30px;
-    text-align: right;
-}
-.pay-item__saldo_negative{
-    color: red;
+     font-size: 30px;
+     color: #05571a;
 }
