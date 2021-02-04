@@ -1,12 +1,15 @@
 .header{
-    background: #c4c4c4;
+    background: #dad8d8;
     height: 60px;
-    color: #888888;
+    color: #555;
     display: flex;
     align-items: center;
     padding: 0 5%;
     border-bottom: 1px solid #999;
-    text-shadow: 1px 1px 1px #555, -1px -1px 1px #eaeaea;
+    text-shadow: 1px 1px 4px rgb(168, 168, 168), -1px -1px 4px #999;
+    box-shadow: 0px 0px 3px #999, 0px 0px 2px rgb(190 188 188);
+    filter: drop-shadow(0 0 3px rgba(100,0,0,0.5));
+    margin-bottom: 5px;
 }
 .header__title{
     font-size: 22px;
