@@ -4,6 +4,11 @@
     align-items: center;
     padding: 15px 5%;
     border-bottom: 1px solid #c6c6c6;
+    border-radius: 32px;
+    border-radius: 21px;
+background: linear-gradient(225deg, #a7a7a7, #c7c7c7);
+box-shadow:  -10px 10px 20px #999999,
+             10px -10px 20px #dbdbdb;
 }
 .pay-item__date{
     display: flex;

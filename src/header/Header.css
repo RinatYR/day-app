@@ -7,6 +7,11 @@
     padding: 0 5%;
     border-bottom: 1px solid #999;
     text-shadow: 1px 1px 1px #555, -1px -1px 1px #eaeaea;
+    border-radius: 21px;
+    border-radius: 21px;
+    background: linear-gradient(225deg, #a7a7a7, #c7c7c7);
+    box-shadow:  -10px 10px 20px #999999,
+             10px -10px 20px #dbdbdb;
 }
 .header__title{
     font-size: 22px;
