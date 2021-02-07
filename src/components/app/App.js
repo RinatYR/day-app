@@ -2,6 +2,7 @@ import './App.css';
 import Header from '../header/Header';
 import PayList from '../pay-list/PayList';
 import { useContext, useState } from 'react';
+import { getDateNow } from '../../utils/formUtils';
 
 const payItems = [
   {day: '07', mounth: 'ЯНВ', year: '20', positive: 3000, negative: 543},
@@ -12,22 +13,12 @@ const payItems = [
 ];
 
 
-function getDateNow(){
-  const dateNow = new Date();
-  const yearNow = dateNow.getFullYear() < 10 ? '0' + dateNow.getFullYear() : dateNow.getFullYear();
-  const monthNow = dateNow.getMonth() < 10 ? '0' + dateNow.getMonth() : dateNow.getMonth();
-  const dayNow = dateNow.getDate() < 10 ? '0' + dateNow.getDate() : dateNow.getDate();
-  return `${yearNow}-${monthNow}-${dayNow}`
 
-}
 
 
 function App() {
 
-
-  
-  
-  const [date, setDate] = useState(getDateNow());
+const [date, setDate] = useState(getDateNow());
 
 const handlerInputText = (e) => {
 
