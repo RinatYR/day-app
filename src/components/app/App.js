@@ -2,7 +2,7 @@ import './App.css';
 import Header from '../header/Header';
 import PayList from '../pay-list/PayList';
 import { useContext, useState } from 'react';
-import { getDateNow } from '../../utils/formUtils';
+import { getDateNow, clearSymbol } from '../../utils/formUtils';
 
 const payItems = [
   {day: '07', mounth: 'ЯНВ', year: '20', positive: 3000, negative: 543},
@@ -18,17 +18,24 @@ const payItems = [
 
 function App() {
 
+  /*Стейт даты   */
 const [date, setDate] = useState(getDateNow());
 
-const handlerInputText = (e) => {
+/*Стейт расхода   */
+const [negative, setNegative] = useState('');
 
-  /*ограничить длину ввода*/
-//  const value = e.target.value.length < 10 ? e.target.value : inputText;
+/*Стейт дохода   */
+const [positive, setPositive] = useState('');
 
-/*сжать пробелы */
-// const value = e.target.value.trim(); 
-//  setInputText(value);
-};
+// const handlerInputText = (e) => {
+
+//   /*ограничить длину ввода*/
+// //  const value = e.target.value.length < 10 ? e.target.value : inputText;
+
+// /*сжать пробелы */
+// // const value = e.target.value.trim(); 
+// //  setInputText(value);
+// };
 
 // let numOne = '';
 // const numArr = [];
@@ -51,9 +58,9 @@ const handlerInputText = (e) => {
       {/* <PayList payItems={payItems} /> */}
       <div>
           <input type="date" onInput={(e) => setDate(e.target.value)} value={date}/>
-          <input type="text" onInput={(e) => console.log(e.target.value)}/>
-          <input type="text" onInput={(e) => console.log(e.target.value)}/>
-
+          <input type="text" onInput={(e) => setNegative(clearSymbol(e.target.value))} value={negative} placeholder="Введите расходы"/>
+          <input type="text" onInput={(e) => setPositive(e.target.value)} value={positive} placeholder="Введите доходы"/>
+          <button>Добавить</button>
       </div>
       {/* <input type="text" onInput={handlerInputText} value={inputText}/>
       <button class="num" onClick={buttonClick}>1</button> */}
