@@ -2,7 +2,7 @@ import './App.css';
 import Header from '../header/Header';
 import PayList from '../pay-list/PayList';
 import { useContext, useState } from 'react';
-import { getDateNow, clearSymbol } from '../../utils/formUtils';
+import { getDateNow, clearSymbol, MONTH_RU } from '../../utils/formUtils';
 
 const payItems = [
   {day: '07', mounth: 'ЯНВ', year: '20', positive: 3000, negative: 543},
@@ -26,6 +26,17 @@ const [negative, setNegative] = useState('');
 
 /*Стейт дохода   */
 const [positive, setPositive] = useState('');
+
+
+const handlerAddDay = () =>{
+
+  const dateParse = date.split('-');
+  const day = dateParse[2];
+  const mounth = MONTH_RU[parseInt(dateParse[1])];
+  const year = dateParse[0].slice(2);
+  const result = {day , mounth, year , positive, negative};
+  console.log(result);
+}
 
 // const handlerInputText = (e) => {
 
@@ -58,9 +69,9 @@ const [positive, setPositive] = useState('');
       {/* <PayList payItems={payItems} /> */}
       <div>
           <input type="date" onInput={(e) => setDate(e.target.value)} value={date}/>
-          <input type="text" onInput={(e) => setNegative(clearSymbol(e.target.value))} value={negative} placeholder="Введите расходы"/>
-          <input type="text" onInput={(e) => setPositive(e.target.value)} value={positive} placeholder="Введите доходы"/>
-          <button>Добавить</button>
+          <input type="text" onInput={(e) => setNegative(clearSymbol(e.target.value, negative))} value={negative} placeholder="Введите расходы"/>
+          <input type="text" onInput={(e) => setPositive(clearSymbol(e.target.value, positive))} value={positive} placeholder="Введите доходы"/>
+          <button onClick={handlerAddDay}>Добавить</button>
       </div>
       {/* <input type="text" onInput={handlerInputText} value={inputText}/>
       <button class="num" onClick={buttonClick}>1</button> */}
