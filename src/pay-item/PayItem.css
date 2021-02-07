@@ -11,7 +11,7 @@
   height: 90%; */
   box-sizing: border-box;
  
-  box-shadow: 2px 2px 5px #d3d2d2, -2px -2px 5px #f5f4f4;
+  box-shadow: 4px 4px 5px #d0d0d0, -4px -4px 5px #fefefe;
 
 }
 .pay-item__date{
