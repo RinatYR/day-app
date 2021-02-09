@@ -38,6 +38,9 @@ const handlerAddDay = () =>{
   console.log(result);
 }
 
+
+
+
 // const handlerInputText = (e) => {
 
 //   /*ограничить длину ввода*/
@@ -48,34 +51,55 @@ const handlerAddDay = () =>{
 // //  setInputText(value);
 // };
 
-// let numOne = '';
-// const numArr = [];
-// const buttonClick = (e) =>{
-//   numOne += e.target.innerText;
-//   console.log(numOne);
-// //   numArr.push(numOne);
-// //   console.log(numArr[numArr.length-1]);
-// //  // console.log(inputText)
-// //   setInputText(numOne.length > inputText.length ? numOne : inputText);
-//   return numOne
-// };
-
-
-
+const [textH1, setTextH1] = useState('0');
+let numOne = '';
+//const numArr = [];
+function buttonClick(e){
+ numOne += e.target.innerText;
+ console.log(numOne);
+ //setTextH1(sendToSet);
+//   numArr.push(numOne);
+//   console.log(numArr[numArr.length-1]);
+// setTextH1(numOne.length >= textH1.length ? numOne : textH1);
+//setTextH1(numOne)
+};
 
   return (
     <>
       <Header />
       {/* <PayList payItems={payItems} /> */}
-      <div>
-          <input type="date" onInput={(e) => setDate(e.target.value)} value={date}/>
-          <input type="text" onInput={(e) => setNegative(clearSymbol(e.target.value, negative))} value={negative} placeholder="Введите расходы"/>
-          <input type="text" onInput={(e) => setPositive(clearSymbol(e.target.value, positive))} value={positive} placeholder="Введите доходы"/>
-          <button onClick={handlerAddDay}>Добавить</button>
+      <div className="main__form">
+      <div className="input__form">
+          <input className="input__item input_text" type="text" onInput={(e) => setNegative(clearSymbol(e.target.value, negative))} value={negative} placeholder="Введите расходы"/>
+          <input className="input__item input_text" type="text" onInput={(e) => setPositive(clearSymbol(e.target.value, positive))} value={positive} placeholder="Введите доходы"/>
+          <input className="input__item input_date" type="date" onInput={(e) => setDate(e.target.value)} value={date}/>
       </div>
-      {/* <input type="text" onInput={handlerInputText} value={inputText}/>
-      <button class="num" onClick={buttonClick}>1</button> */}
-
+      <button className="main__button" onClick={handlerAddDay}>Внести</button>
+      </div>
+      {/* <input type="text" onInput={handlerInputText} value={inputText}/> */}
+      <div className="calc__table">
+      <h1>{textH1}</h1>
+      <div>
+      <button class="num" onClick={buttonClick}>1</button>
+      <button class="num" onClick={buttonClick}>2</button>
+      <button class="num" onClick={buttonClick}>3</button>
+      </div>
+      <div>
+      <button class="num" onClick={buttonClick}>4</button>
+      <button class="num" onClick={buttonClick}>5</button>
+      <button class="num" onClick={buttonClick}>6</button>
+      </div>
+      <div>
+      <button class="num" onClick={buttonClick}>7</button>
+      <button class="num" onClick={buttonClick}>8</button>
+      <button class="num" onClick={buttonClick}>9</button>
+      </div>
+      <div>
+      <button class="num" onClick={buttonClick}>+</button>
+      <button class="num" onClick={buttonClick}>0</button>
+      <button class="num" onClick={buttonClick}>-</button>
+      </div>
+      </div>
     </>
   );
 }
