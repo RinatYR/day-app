@@ -51,7 +51,7 @@ const handlerAddDay = () =>{
 // //  setInputText(value);
 // };
 
-const [textH1, setTextH1] = useState('0');
+const [textH1, setTextH1] = useState('00');
 let numOne = '';
 //const numArr = [];
 function buttonClick(e){
@@ -61,7 +61,7 @@ function buttonClick(e){
 //   numArr.push(numOne);
 //   console.log(numArr[numArr.length-1]);
 // setTextH1(numOne.length >= textH1.length ? numOne : textH1);
-//setTextH1(numOne)
+setTextH1(numOne)
 };
 
   return (
@@ -80,24 +80,24 @@ function buttonClick(e){
       <div className="calc__table">
       <h1>{textH1}</h1>
       <div>
-      <button class="num" onClick={buttonClick}>1</button>
-      <button class="num" onClick={buttonClick}>2</button>
-      <button class="num" onClick={buttonClick}>3</button>
+      <button className="num" onClick={buttonClick}>1</button>
+      <button className="num" onClick={buttonClick}>2</button>
+      <button className="num" onClick={buttonClick}>3</button>
       </div>
       <div>
-      <button class="num" onClick={buttonClick}>4</button>
-      <button class="num" onClick={buttonClick}>5</button>
-      <button class="num" onClick={buttonClick}>6</button>
+      <button className="num" onClick={buttonClick}>4</button>
+      <button className="num" onClick={buttonClick}>5</button>
+      <button className="num" onClick={buttonClick}>6</button>
       </div>
       <div>
-      <button class="num" onClick={buttonClick}>7</button>
-      <button class="num" onClick={buttonClick}>8</button>
-      <button class="num" onClick={buttonClick}>9</button>
+      <button className="num" onClick={buttonClick}>7</button>
+      <button className="num" onClick={buttonClick}>8</button>
+      <button className="num" onClick={buttonClick}>9</button>
       </div>
       <div>
-      <button class="num" onClick={buttonClick}>+</button>
-      <button class="num" onClick={buttonClick}>0</button>
-      <button class="num" onClick={buttonClick}>-</button>
+      <button className="num" onClick={buttonClick}>+</button>
+      <button className="num" onClick={buttonClick}>0</button>
+      <button className="num" onClick={buttonClick}>-</button>
       </div>
       </div>
     </>
